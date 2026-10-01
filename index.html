@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Greater Noakhali Student Forum, CUET</title>
+<meta name="description" content="Greater Noakhali Student Forum (GNSF), CUET: a community for students from Noakhali, Feni and Lakshmipur.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0a2a5e;--navy-d:#071d44;--gold:#e0a526;--paper:#f7f6f2;--ink:#13203a;--mist:#e4e8f0;--w:215px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:"Hind Siliguri",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.7;font-size:17px}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;line-height:1.2}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+header{background:var(--navy-d);color:#fff;position:sticky;top:0;z-index:10;border-bottom:3px solid var(--gold)}
+header .wrap{display:flex;align-items:center;gap:14px;padding:8px 20px}
+header .logo{background:#fff;border-radius:6px;padding:3px 6px;display:flex}
+header .logo img{height:40px;width:auto}
+nav{margin-left:auto;display:flex;gap:20px;font-size:.95rem;align-items:center}
+nav a{text-decoration:none;opacity:.9}nav a:hover{opacity:1;color:var(--gold)}
+.hero{background:linear-gradient(160deg,var(--navy),var(--navy-d));color:#fff;padding:48px 0 60px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:center}
+.since{display:inline-block;border:1px solid var(--gold);color:var(--gold);padding:2px 14px;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+.hero h1{font-size:clamp(2rem,4.4vw,3.1rem);margin:14px 0}
+.motto{color:var(--gold);font-family:"Playfair Display",serif;font-style:italic;font-size:1.2rem;margin-bottom:10px}
+.hero p{opacity:.93;max-width:52ch}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:4px;text-decoration:none;font-weight:600;font-size:.95rem}
+.btn.gold{background:var(--gold);color:var(--navy-d)}.btn.gold:hover{background:#f0b838}
+.btn.line{border:1.5px solid #fff;color:#fff}.btn.line:hover{background:#fff;color:var(--navy)}
+.slider{position:relative;aspect-ratio:4/3;border-radius:6px;overflow:hidden;background:var(--navy-d);border:3px solid var(--gold)}
+.slider figure{position:absolute;inset:0;opacity:0;transition:opacity .9s}
+.slider figure.on{opacity:1}
+.slider img{width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block}
+.dots{position:absolute;left:0;right:0;bottom:10px;display:flex;gap:7px;justify-content:center}
+.dots button{width:11px;height:11px;border-radius:50%;border:1.5px solid #fff;background:rgba(0,0,0,.25);cursor:pointer;padding:0}
+.dots button.on{background:var(--gold);border-color:var(--gold)}
+section.block{padding:64px 0}
+.head h2{font-size:clamp(1.6rem,3vw,2.1rem);color:var(--navy)}
+.head h2::after{content:"";display:block;width:56px;height:4px;background:var(--gold);margin-top:10px}
+.head p{margin:14px 0 36px;color:#4a5876;max-width:60ch}
+.tree{display:flex;flex-direction:column;gap:34px}
+.row{display:flex;justify-content:center;flex-wrap:wrap;gap:18px;align-items:center}
+.row-label{width:100%;text-align:center;font-family:"Playfair Display",serif;color:var(--navy);font-size:1.05rem;border-top:1px solid #cdd4e2;padding-top:10px;margin-top:4px}
+.card{width:var(--w);background:none;border:0;padding:0;cursor:zoom-in;text-align:center;font:inherit;color:inherit}
+.card img{width:100%;height:auto;display:block;border-radius:6px;box-shadow:0 3px 14px rgba(10,42,94,.22);transition:transform .2s}
+.card:hover img{transform:translateY(-4px)}
+.card span{display:block;font-size:.88rem;font-weight:600;color:var(--navy);margin-top:8px;line-height:1.3}
+.card small{display:block;font-size:.8rem;color:#4a5876}
+.r1 .card{width:290px}.r1 .card.top{width:350px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.gallery button{border:0;padding:0;background:var(--mist);cursor:zoom-in;aspect-ratio:4/3;overflow:hidden;border-radius:4px}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
+.gallery button:hover img{transform:scale(1.05)}
+.mag{background:var(--navy);color:#fff}
+.mag .head h2{color:#fff}.mag .head p{color:#c9d4ea}
+.mag .box{display:grid;grid-template-columns:240px 1fr;gap:36px;align-items:center}
+.mag .box img{width:100%;border-radius:4px;box-shadow:0 8px 28px rgba(0,0,0,.45)}
+.mag h3{font-size:1.6rem}
+.mag .box p{margin:10px 0 0;opacity:.92;max-width:50ch}
+.contact .list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.contact a.item{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid #d5dbe8;border-radius:6px;padding:16px 18px;text-decoration:none}
+.contact a.item:hover{border-color:var(--gold);box-shadow:0 3px 12px rgba(10,42,94,.12)}
+.contact svg,.btn svg{width:22px;height:22px;flex:none}
+.contact svg{color:var(--navy)}
+.contact b{display:block;color:var(--navy);font-size:.82rem;text-transform:uppercase;letter-spacing:.06em}
+.contact span{word-break:break-all}
+footer{background:var(--navy-d);color:#b8c3dc;padding:26px 0;font-size:.9rem;border-top:3px solid var(--gold)}
+dialog{border:0;background:transparent;max-width:96vw;max-height:96vh;padding:0;overflow:visible}
+dialog::backdrop{background:rgba(4,12,30,.88)}
+dialog img{max-width:96vw;max-height:92vh;display:block;margin:0 auto;border-radius:4px}
+dialog button{position:fixed;top:14px;right:18px;background:var(--gold);border:0;width:40px;height:40px;border-radius:50%;font-size:1.4rem;cursor:pointer;color:var(--navy-d)}
+@media(max-width:820px){
+ .hero .wrap,.mag .box{grid-template-columns:1fr}
+ .mag .box img{max-width:220px}
+ nav a:not(.fb){display:none}
+ :root{--w:calc(50% - 9px)}
+ .r1{flex-wrap:nowrap;gap:8px}.r1 .card{width:31%}.r1 .card.top{width:38%}
+ .card span{font-size:.78rem}.card small{font-size:.72rem}
+}
+@media(prefers-reduced-motion:reduce){.slider figure{transition:none}.card img,.gallery img{transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="GNSF home"><img src="logo.png" alt="Greater Noakhali Student Forum logo"></a>
+    <nav>
+      <a href="#about">About</a><a href="#committee">Committee</a><a href="#gallery">Gallery</a><a href="#magazine">Magazine</a><a href="#contact">Contact</a>
+      <a class="fb btn gold" href="#" id="fbTop" target="_blank" rel="noopener">Facebook</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="about">
+  <div class="wrap">
+    <div>
+      <span class="since">Since 2006</span>
+      <h1>Greater Noakhali Student Forum</h1>
+      <p class="motto" id="motto" hidden></p>
+      <p id="aboutText"></p>
+      <div class="btns">
+        <a class="btn gold" href="#committee">Meet the committee</a>
+        <a class="btn line" href="#magazine">Read the magazine</a>
+      </div>
+    </div>
+    <div class="slider" id="slider" aria-roledescription="carousel" aria-label="Forum photos"></div>
+  </div>
+</section>
+
+<section class="block" id="committee">
+  <div class="wrap">
+    <div class="head"><h2>Executive Committee 2025&ndash;2026</h2><p>The students leading the forum this year. Tap a card to see it larger.</p></div>
+    <div class="tree" id="tree"></div>
+  </div>
+</section>
+
+<section class="block" id="gallery" style="background:#fff">
+  <div class="wrap">
+    <div class="head"><h2>Gallery</h2><p>Moments from our gatherings, programmes and events.</p></div>
+    <div class="gallery" id="gal"></div>
+  </div>
+</section>
+
+<section class="block mag" id="magazine">
+  <div class="wrap">
+    <div class="head"><h2>Our Magazine</h2><p>Read the forum's magazine online, right in your browser.</p></div>
+    <div class="box">
+      <a href="gnsf-magazine.pdf" target="_blank" rel="noopener" aria-label="Open the magazine"><img src="cover.jpg" alt="Dorpon magazine cover, 20th anniversary 2006 to 2026" loading="lazy"></a>
+      <div>
+        <h3>Dorpon (&#x09A6;&#x09B0;&#x09CD;&#x09AA;&#x09A3;)</h3>
+        <p>The 20th anniversary edition of the Greater Noakhali Student Forum, covering 2006&ndash;2026.</p>
+        <div class="btns">
+          <a class="btn gold" href="gnsf-magazine.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M2 4c4-1.5 7-1 10 1v15c-3-2-6-2.500-10-1zM22 4c-4-1.500-7-1-10 1v15c3-2 6-2.500 10-1z"/></svg>
+            Read online</a>
+          <a class="btn line" href="gnsf-magazine.pdf" download>Download PDF</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block contact" id="contact">
+  <div class="wrap">
+    <div class="head"><h2>Get in touch</h2><p>Reach out to the forum for membership, events or any help.</p></div>
+    <div class="list">
+      <a class="item" id="fbLink" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.500h2.900l.5-3.500h-3.400V7.900c0-1 .3-1.700 1.700-1.700H17V3.100C16.700 3 15.700 2.900 14.500 2.900c-2.500 0-4.200 1.500-4.200 4.300V10H7.500v3.500h2.800V22z"/></svg>
+        <div><b>Facebook</b><span>Greater Noakhali Student Forum</span></div></a>
+      <a class="item" id="phone" href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-2.500 1.500a11 11 0 005 5L15 12l5 2v4a2 2 0 01-2 2A16 16 0 013 5a2 2 0 012-2z"/></svg>
+        <div><b>Phone</b><span id="phoneTxt"></span></div></a>
+      <a class="item" id="mail" href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        <div><b>Email</b><span id="mailTxt"></span></div></a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">&copy; Greater Noakhali Student Forum, Chittagong University of Engineering and Technology</div></footer>
+
+<dialog id="lb"><button aria-label="Close" onclick="lb.close()">&times;</button><img id="lbImg" alt=""></dialog>
+
+<script>
+/* ============ EDIT THIS SECTION ONLY ============ */
+const MOTTO = "";   // add your motto between the quotes; it appears under the title when filled
+const ABOUT = "The Greater Noakhali Student Forum (GNSF) is a regional organization at CUET that represents students from Noakhali, Feni and Lakshmipur. Since 2006 we have built a close community, promoted social activism, and offered financial and alumni support to students who need it.";
+const FACEBOOK = "https://www.facebook.com/share/1Esp86GRRu/";
+const PHONE = "01648-096898";
+const EMAIL = "fahimulislam0987@gmail.com";
+
+// Slideshow photos (files in images/photos). Changes every 3 seconds.
+const SLIDES = [
+  ["agm.jpg","Annual general meeting group photo"],
+  ["helpdesk-2.jpg","CUET Admission Help Desk 2026"],
+  ["iftar-lakshmipur.jpg","Iftar and get-together"],
+  ["night-group.jpg","Forum members group photo"],
+  ["iftar-kacchi.jpg","Iftar gathering"],
+  ["mosque-group.jpg","Forum members together"]
+];
+
+// Gallery photos: [file name without .jpg, alt text]. A matching -thumb file must exist.
+const GALLERY = [
+  ["agm","Annual general meeting group photo"],
+  ["magazine-handover","Presenting the Dorpon magazine"],
+  ["helpdesk-2","CUET Admission Help Desk 2026"],
+  ["iftar-lakshmipur","Iftar and get-together"],
+  ["iftar-kacchi","Iftar gathering"],
+  ["night-group","Forum members group photo"],
+  ["mosque-group","Forum members together"],
+  ["helpdesk-1","Members at the Admission Help Desk"]
+];
+
+// Committee rows, top to bottom. Row 1 order is: left, middle (larger), right.
+// Each member: [file name without .jpg in images/committee, name, role]
+const COMMITTEE = [
+  { cls:"r1", members:[
+    ["organising-secretary","Md Nazim Raju","Organising Secretary"],
+    ["president","Jibran Khandoker Seyam","President",1],
+    ["general-secretary","Md. Fahimul Islam","General Secretary"]
+  ]},
+  { label:"Vice Presidents", members:[
+    ["vp-admin","Md Anas Bin Hossain","Vice President (Admin)"],
+    ["vp-technical","Suvra Chandra Das","Vice President (Technical)"],
+    ["vp-er-rafidul","ASM Rafidul Alam Bhuiyan","Vice President (ER)"],
+    ["vp-er-maksuda","Maksuda Khanam","Vice President (ER)"],
+    ["vp-management","Ashraf Uddin","Vice President (Management)"]
+  ]},
+  { label:"Secretaries", members:[
+    ["joint-general-secretary","Imran Hossen","Joint General Secretary"],
+    ["finance-secretary","Md. Mizanur Rahman","Finance Secretary"],
+    ["asst-finance-secretary","Imtiaz Sultan","Assistant Finance Secretary"],
+    ["office-secretary","Md Aymanul Haque","Office Secretary"]
+  ]},
+  { members:[
+    ["travel-tourism-secretary","Nurul Amin Tased","Travel & Tourism Secretary"],
+    ["sports-secretary","Julker Nain","Sports Secretary"]
+  ]}
+];
+/* ============ END OF EDIT SECTION ============ */
+
+const $ = id => document.getElementById(id);
+const lb = $("lb");
+function openLB(src, alt){ $("lbImg").src = src; $("lbImg").alt = alt; lb.showModal(); }
+lb.addEventListener("click", e => { if (e.target === lb || e.target.id === "lbImg") lb.close(); });
+
+// Text and links
+$("aboutText").textContent = ABOUT;
+if (MOTTO) { $("motto").textContent = MOTTO; $("motto").hidden = false; }
+$("fbTop").href = $("fbLink").href = FACEBOOK;
+$("phone").href = "tel:+88" + PHONE.replace(/-/g, "");
+$("phoneTxt").textContent = PHONE;
+$("mail").href = "mailto:" + EMAIL;
+$("mailTxt").textContent = EMAIL;
+
+// Slideshow
+const box = $("slider"), figs = [], dots = [], dotBox = document.createElement("div");
+dotBox.className = "dots";
+SLIDES.forEach((s, i) => {
+  const f = document.createElement("figure");
+  f.innerHTML = `<img src="photo-${s[0]}" alt="${s[1]}"${i ? ' loading="lazy"' : ""}>`;
+  box.appendChild(f); figs.push(f);
+  const d = document.createElement("button");
+  d.setAttribute("aria-label", "Show photo " + (i + 1));
+  d.onclick = () => { show(i); restart(); };
+  dotBox.appendChild(d); dots.push(d);
+});
+box.appendChild(dotBox);
+let cur = 0, timer;
+function show(i){ cur = i; figs.forEach((f,k)=>f.classList.toggle("on",k===i)); dots.forEach((d,k)=>d.classList.toggle("on",k===i)); }
+function restart(){ clearInterval(timer); timer = setInterval(() => show((cur + 1) % figs.length), 3000); }
+if (figs.length) { show(0); restart(); }
+box.onmouseenter = () => clearInterval(timer);
+box.onmouseleave = restart;
+
+// Committee
+COMMITTEE.forEach(r => {
+  const row = document.createElement("div"); row.className = "row " + (r.cls || "");
+  if (r.label) { const l = document.createElement("div"); l.className = "row-label"; l.textContent = r.label; row.appendChild(l); }
+  r.members.forEach(m => {
+    const c = document.createElement("button"); c.className = "card" + (m[3] ? " top" : "");
+    c.innerHTML = `<img src="committee-${m[0]}.jpg" alt="${m[1]}, ${m[2]}" loading="lazy"><span>${m[1]}<small>${m[2]}</small></span>`;
+    c.onclick = () => openLB(`committee-${m[0]}.jpg`, `${m[1]}, ${m[2]}`);
+    row.appendChild(c);
+  });
+  $("tree").appendChild(row);
+});
+
+// Gallery
+GALLERY.forEach(g => {
+  const b = document.createElement("button");
+  b.innerHTML = `<img src="photo-${g[0]}-thumb.jpg" alt="${g[1]}" loading="lazy">`;
+  b.onclick = () => openLB(`photo-${g[0]}.jpg`, g[1]);
+  $("gal").appendChild(b);
+});
+</script>
+</body>
+</html>
